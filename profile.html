@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shine - Profile</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="Javascript/cart-indicator.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="shine planning/shine logo done.png" alt="Shine Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="help.html">Help</a></li>
+      <li style="display: flex; align-items: center;">
+        <a href="cart.html" class="cart-link" id="cart-link" aria-label="Cart">
+          <i class="fas fa-shopping-bag cart-icon" aria-hidden="true" style="font-size: 1.2rem;"></i>
+        </a>
+      </li>
+      <li>
+        <a href="profile.html" aria-label="Profile">
+          <i class="fas fa-user" style="font-size: 1.2rem;"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- PROFILE FORM -->
+<main class="profile-container">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="login">Login</button>
+    <button class="tab-btn" data-tab="signup">Sign Up</button>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="login" class="tab-content active">
+    <form class="profile-form" id="login-form">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- SIGN UP -->
+  <div id="signup" class="tab-content">
+    <form class="profile-form" id="signup-form">
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</main>
+
+<!-- SUCCESS POPUP -->
+<div id="profile-popup" style="color: darkgoldenrod;">
+  <h3>Form submitted successfully!</h3>
+</div>
+
+<footer>
+  <p>&copy; 2025 Shine. All rights reserved.</p>
+</footer>
+
+<script>
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Form submission popup
+function handleSubmit(e) {
+  e.preventDefault();
+  let popup = document.getElementById("profile-popup");
+  popup.style.display = "block";
+  setTimeout(() => { popup.style.display = "none"; }, 3000);
+  e.target.reset();
+}
+
+document.getElementById("login-form").addEventListener("submit", handleSubmit);
+document.getElementById("signup-form").addEventListener("submit", handleSubmit);
+</script>
+
+</body>
+</html>

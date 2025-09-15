@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="Javascript/cart.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="shine planning/shine logo done.png" alt="Shine Logo"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li style="display: flex; align-items: center;">
+          <a href="cart.html" class="cart-link" id="cart-link" aria-label="Cart">
+            <i class="fas fa-shopping-bag cart-icon" aria-hidden="true" style="font-size: 1.2rem;"></i>
+          </a>
+        </li>
+      <li><a href="help.html">Help</a></li>
+      <li>
+        <a href="profile.html" aria-label="Profile">
+          <i class="fas fa-user" style="font-size: 1.2rem;"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Your Shopping Cart</h1>
+  <div id="cart-container"></div>
+  <div id="cart-total"></div>
+  <div id="cart-total"></div>
+  <button id="order-btn" style="display:none;">Place Order</button>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cartContainer = document.getElementById("cart-container");
+    const cartTotal = document.getElementById("cart-total");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function renderCart() {
+        cartContainer.innerHTML = "";
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+            cartTotal.innerHTML = "";
+            return;
+        }
+
+        cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+
+            cartContainer.innerHTML += `
+                <div class="cart-item">
+                    <img src="${item.image}" width="80">
+                    <span>${item.name}</span>
+                    <span>$${item.price.toFixed(2)}</span>
+                    <input type="number" min="1" value="${item.quantity}" data-index="${index}" class="cart-qty">
+                    <button data-index="${index}" class="remove-item">Remove</button>
+                </div>
+            `;
+        });
+
+        cartTotal.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>`;
+    }
+
+    cartContainer.addEventListener("change", (e) => {
+        if (e.target.classList.contains("cart-qty")) {
+            const index = e.target.dataset.index;
+            cart[index].quantity = parseInt(e.target.value);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+    });
+
+    cartContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("remove-item")) {
+            const index = e.target.dataset.index;
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+    });
+
+    renderCart();
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const orderBtn = document.getElementById("order-btn");
+
+    function updateOrderButton() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        orderBtn.style.display = cart.length > 0 ? "block" : "none";
+    }
+
+    // Click event for placing order
+    orderBtn.addEventListener("click", () => {
+        alert("Thank you for your order! We will contact you soon.");
+        localStorage.removeItem("cart"); // clear cart after order
+        location.reload(); // refresh page to show empty cart
+    });
+
+    updateOrderButton();
+});
+</script>
+
+
+</body>
+</html>

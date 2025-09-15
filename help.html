@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shine - Help</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="Javascript/cart-indicator.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="shine planning/shine logo done.png" alt="Shine Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="help.html" class="active">Help</a></li>
+      <li style="display: flex; align-items: center;">
+        <a href="cart.html" class="cart-link" id="cart-link" aria-label="Cart">
+          <i class="fas fa-shopping-bag cart-icon" aria-hidden="true" style="font-size: 1.2rem;"></i>
+        </a>
+      </li>
+      <li>
+        <a href="profile.html" aria-label="Profile">
+          <i class="fas fa-user" style="font-size: 1.2rem;"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- TOP IMAGE -->
+<section class="help-banner">
+  <img src="Shine Images/pic 37.webp" alt="Help Banner" style="width:100%; height:300px; object-fit:cover;">
+</section>
+
+<!-- HELP FORM -->
+<main class="help-container">
+    <div>
+        <h2 style="color: #c7903f;">Frequently Asked Questions</h2>
+        
+        <h4>1. How long does shipping take?</h4>
+        <p>Domestic orders: 3-5 business days. International orders: 7-14 business days.</p>
+        
+        <h4>2. Can I retursn or exchange an item?</h4>
+        <p>Yes, unworn items can be returned within 30 days. For exchanges, contact customer support first.</p>
+        
+        <h4>3. Do you offer custom jewelry?</h4>
+        <p>Yes, we design custom rings, necklaces, and bracelets. Send us your idea through our Help page.</p>
+        
+        <h4>4. Is your jewelry hypoallergenic?</h4>
+        <p>Most of our pieces are hypoallergenic and made from nickel-free materials. Check each product description for details.</p>
+        
+        <h4>5. Do you offer gift wrapping?</h4>
+        <p>Yes, we offer premium gift wrapping for $5. You can select this option at checkout.</p>
+        
+        <h4>6. How can I track my order?</h4>
+        <p>Once shipped, you'll receive an email with a tracking link so you can follow your order's progress.</p>
+    </div>
+
+    <div class="title">
+    <h2>Unaswered questions?</h2>
+    <p>Tell us how can we help you</p>
+    <form class="help-form" id="help-form">
+        <div class="form-row">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="form-row">
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone Number">
+        </div>
+        <select required>
+        <option value="">Select a Topic</option>
+        <option value="order-status">Order Status</option>
+        <option value="returns">Returns & Exchanges</option>
+        <option value="custom-jewelry">Custom Jewelry Request</option>
+        <option value="product-info">Product Information</option>
+        <option value="repair-service">Repair Service</option>
+        <option value="other">Other</option>
+        </select>
+        <textarea placeholder="Describe your problem or question..." rows="5" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</main>
+
+<!-- SUCCESS POPUP -->
+<div id="success-popup">
+  <h3>Your request has been sent!</h3>
+  <p>We'll get back to you within 24-48 hours.</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Shine. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("help-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let popup = document.getElementById("success-popup");
+  popup.style.display = "block";
+  setTimeout(() => { popup.style.display = "none"; }, 3000);
+  this.reset();
+});
+</script>
+
+</body>
+</html>

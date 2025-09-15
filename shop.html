@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shine - Shop</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="Javascript/shop.js"></script>
+<script src="Javascript/cart.js"></script>
+</head>
+<body>
+
+
+<!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="shine planning/shine logo done.png" alt="Shine Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li style="display: flex; align-items: center;">
+          <a href="cart.html" class="cart-link" id="cart-link" aria-label="Cart">
+            <i class="fas fa-shopping-bag cart-icon" aria-hidden="true" style="font-size: 1.2rem;"></i>
+          </a>
+        </li>
+        <li><a href="help.html">Help</a></li>
+        <li>
+        <a href="profile.html" aria-label="Profile">
+          <i class="fas fa-user" style="font-size: 1.2rem;"></i>
+        </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- MAIN SHOP LAYOUT -->
+<div class="shop-layout">
+  
+  <!-- FILTER SIDEBAR -->
+  <aside class="filter-sidebar">
+    <h2>Search Products</h2>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+      <button><i class="fa fa-search"></i></button>
+    </div>
+    <hr>
+    
+    <h2>Filter By:</h2>
+    <hr>
+    <h4>Category</h4>
+    <label><input type="checkbox" value="1"> Necklaces</label><br>
+    <label><input type="checkbox" value="2"> Earrings</label><br>
+    <label><input type="checkbox" value="3"> Rings</label><br>
+    <label><input type="checkbox" value="4"> Bracelets & Watches</label><br>
+    <label><input type="checkbox" value="5"> Body Jewelry</label><br>
+
+    <hr>
+    <h4>Price</h4>
+    <label><input type="checkbox"> Under $50</label><br>
+    <label><input type="checkbox"> $50 - $100</label><br>
+    <label><input type="checkbox"> Over $100</label><br>
+  </aside>
+
+  <!-- PRODUCT AREA -->
+
+  <section class="product-list">
+    <div class="shop-image">
+        <img src="Shine Images/pic 39.jpg" alt="Shop menu image">
+    </div>
+    <!-- Necklaces -->
+    <div class="product-grid">
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 7..jpg"><h4>Heart of Pearls Necklace</h4><p>$55.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 8..jpg"><h4>Queen of Pearls Necklace</h4><p>$60.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 9..jpg"><h4>Flowers Beads Necklace</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic. 11.jpg"><h4>Icy Butterfly Necklace</h4><p>$160.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 4..jpg"><h4>Pink Heart Necklace</h4><p>$100.00</p><button>Add to Cart</button></div>      
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 5..jpg"><h4>Gemstone Necklace</h4><p>$60.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 6..jpg"><h4>Dragon Necklace</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 47.jpg"><h4>Shell Flower Necklace</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 48.jpg"><h4>Sunrise Shell Necklace</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 53.jpg"><h4>Starfish Necklace</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 49.jpg"><h4>Seashell Stacked Necklace</h4><p>$100.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 50.jpg"><h4>Mother of Pearls Necklace</h4><p>$200.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 51.jpg"><h4>Mermaid Tail Necklace</h4><p>$50.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 52.jpg"><h4>Siren Necklace</h4><p>$95.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 92.jpg"><h4>Orchid Necklace</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="1"><img src="Shine Images/pic 93.jpg"><h4>Heart Lock-it Necklace</h4><p>$45.00</p><button>Add to Cart</button></div>
+    </div>
+
+    <!-- Earrings -->
+    <div class="product-grid">
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 12..jpg"><h4>Constellation Earrings</h4><p>$65.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 18..jpg"><h4>Cherry Bomb Earrings</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 17..jpg"><h4>Queen of Hearts Earrings</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 16..jpg"><h4>Angel Piercing Earrings Set</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 15..jpg"><h4>Butterfly Piercing Earrings Set</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 14..jpg"><h4>Celestial Earrings</h4><p>$60.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 13..jpg"><h4>Goddess Earrings Set</h4><p>$60.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 54.jpg" alt=""><h4>Plumeria Earrings</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 55.jpg"><h4>Seashell Earrings</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 56.jpg"><h4>Sunrise Shell Earrings</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 57.jpg"><h4>Starfish Earrings</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 58.jpg"><h4>Pirl Shell Earrings Set</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 59.jpg"><h4>Mother of pearls Earrings Set</h4><p>$75.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 61.jpg"><h4>Mermaid Piercing Earrings Set</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 62.jpg"><h4>Siren Piercing Earrings Set</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="2"><img src="Shine Images/pic 60.jpg"><h4>Ocean Piercing Earrings Set</h4><p>$45.00</p><button>Add to Cart</button></div>
+    </div>
+
+    <!-- Rings -->
+    <div class="product-grid">
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 23..jpg"><h4>Pink Rings Set</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 22.jpg"><h4>Rainbow Ring</h4><p>$85.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 21..jpg"><h4>Butterfly Ring</h4><p>$50.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 20..jpg"><h4>Diamond Ring</h4><p>$375.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 19..jpg"><h4>Ruby Rings Set</h4><p>$240.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 41.jpg"><h4>Pink Gemstone Ring</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 40.jpg"><h4>Bow Rings Set</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 63.jpg"><h4>Plumeria Rings Set</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 64.jpg"><h4>Seashell Ring</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 65.jpg"><h4>Sunrise Shell Ring</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 66.jpg"><h4>Starfish Ring</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 69.jpg"><h4>Vintage Ocean Rings Set</h4><p>$70.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 67.jpg"><h4>Mother of Pearls Rings Set</h4><p>$65.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 68.jpg"><h4>Mermaid Gemstone Ring</h4><p>$55.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 70.jpg"><h4>Coral Ring</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="3"><img src="Shine Images/pic 94.jpg"><h4>Star Ring</h4><p>$35.00</p><button>Add to Cart</button></div>
+    </div>
+
+    <!-- Bracelets & Watches -->
+    <div class="product-grid">
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 24.jpg"><h4>Saphirre Flower Watch</h4><p>$180.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 25.jpg"><h4>Emerald Watch</h4><p>$185.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 27.jpg"><h4>Pink Beads Bracelet Set</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 26.jpg"><h4>Stars Bracelet</h4><p>$375.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 43.jpg"><h4>Vintage China Brangel</h4><p>$90.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 42.jpg"><h4>Pink Nature Charm Bracelet</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 82.jpg" alt=""><h4>Plumeria Flower Bracelet</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 72.jpg"><h4>Seashell Beads Bracelet</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 74.jpg"><h4>Sunrise Shell Bracelet</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 78.jpg"><h4>Starfish Bracelet</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 76.jpg"><h4>Pink Seashell Charm Bracelet</h4><p>$50.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 77.jpg"><h4>Mother of Pearls Watch</h4><p>$110.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 80.jpg"><h4>Mermaid Tail Bangel</h4><p>$40.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 71.jpg"><h4>Ocean Blue Watch</h4><p>$100.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 81.jpg"><h4>Ocean Life Charm Bracelet</h4><p>$40.00</p><button>Add to Cart</button></div>  
+      <div class="product-card" data-category="4"><img src="Shine Images/pic 95.jpg"><h4>Vintage gemstone Bangel Set</h4><p>$70.00</p><button>Add to Cart</button></div>
+    </div>
+
+    <!-- Body Jewelry -->
+    <div class="product-grid">
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 34.jpg"><h4>Heart Tounge Piercing</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 33.jpg"><h4>Swirl Nose Piercing</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 44.jpg"><h4>Arm Chain</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 32.jpg"><h4>Breast Chain</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 30.jpg"><h4>Heart Belly Chain</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 31.jpg"><h4>Sanke Thigh Chain</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 29.jpg"><h4>Heart Belly Piercing</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 85.jpg" alt=""><h4>Plumeria Nose Piercing</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 88.jpg"><h4>Seashell Hair Charms</h4><p>$25.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 87.jpg"><h4>Beads AnkleBand</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 83.jpg"><h4>Starfish Armcuffs</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 84.jpg"><h4>Seashell Belly Piercing</h4><p>$30.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 86.jpg"><h4>Mother of Pearls Top</h4><p>$150.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 90.jpg"><h4>Siren Belly Chain</h4><p>$35.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 91.jpg"><h4>Ocean Blue Feet Jewelry</h4><p>$45.00</p><button>Add to Cart</button></div>
+      <div class="product-card" data-category="5"><img src="Shine Images/pic 96.jpg"><h4>Dianmond Back Chain</h4><p>$95.00</p><button>Add to Cart</button></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 Shine. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
