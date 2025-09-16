@@ -25,6 +25,7 @@ Open the index.html file in your web browser.
 The design of this website began with a mood board to translate the brand's elegant vision into a tangible design. This visual approach helped to guide the color palette, typography, and overall aesthetic to ensure the final product truly embodied the essence of the "Shine" brand.
 
 ### Author
-Luvienna ౨ৎ
+⋆. 𐙚˚࿔ luvienna 𝜗𝜚˚⋆
+
 
 Feel free to explore the code, and don't hesitate to reach out with any feedback!
